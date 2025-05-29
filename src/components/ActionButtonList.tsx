@@ -4,7 +4,6 @@ import { networks } from '@/config'
 
 export const ActionButtonList = () => {
     const { disconnect } = useDisconnect();
-    const { open } = useAppKit();
     const { switchNetwork } = useAppKitNetwork();
 
     const handleDisconnect = async () => {
@@ -16,7 +15,6 @@ export const ActionButtonList = () => {
     }
   return (
     <div>
-        {/* <button onClick={() => open()}>Open</button> */}
         
         <button onClick={() => switchNetwork(networks[0]) }>BSC</button>
         <button onClick={() => switchNetwork(networks[1]) }>Ethereum</button>
